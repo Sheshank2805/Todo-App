@@ -12,11 +12,7 @@ function App() {
     axios
       .get("https://jsonplaceholder.typicode.com/users/1/todos")
       .then((response) => {
-        const initialTodos = response.data.map((todo) => ({
-          ...todo,
-          completed: false,
-        }));
-        setTodos(initialTodos);
+        setTodos(response.data);
         console.log(response.data);
       })
       .catch((error) => {
