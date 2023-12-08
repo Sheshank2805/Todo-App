@@ -16,7 +16,9 @@ const AddTodo = ({ todos, setTodos }) => {
       };
       setTodos([...todos, newTask]);
       setNewTodo("");
-    }
+    }else{
+      alert("please Enter A Valid Todo")
+    }   
   };
 
   return (
